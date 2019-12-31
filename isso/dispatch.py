@@ -47,7 +47,7 @@ class Dispatcher(DispatcherMiddleware):
 
     def default(self, environ, start_response):
         resp = Response("\n".join(self.isso.keys()),
-                        404, content_type="text/plain")
+                        404, content_type="text/plain; charset=UTF-8")
         return resp(environ, start_response)
 
 

@@ -63,4 +63,4 @@ class Info(object):
             "moderation": self.moderation,
         }
 
-        return Response(json.dumps(rv), 200, content_type="application/json")
+        return Response(json.dumps(rv), 200, content_type="application/json; charset=UTF-8")

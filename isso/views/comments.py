@@ -570,7 +570,7 @@ class API(object):
             "</body>"
             "</html>")
 
-        return Response(modal, 200, content_type="text/html")
+        return Response(modal, 200, content_type="text/html; charset=UTF-8")
 
     """
     @api {post} /id/:id/:action/key moderate
@@ -639,7 +639,7 @@ class API(object):
                 "  }"
                 "</script>" % (action.capitalize(), json.dumps(link)))
 
-            return Response(modal, 200, content_type="text/html")
+            return Response(modal, 200, content_type="text/html; charset=UTF-8")
 
         if action == "activate":
             if item['mode'] == 1:

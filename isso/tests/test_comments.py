@@ -424,7 +424,7 @@ class TestComments(unittest.TestCase):
 
     def testCSRF(self):
 
-        js = "application/json"
+        js = "application/json; charset=UTF-8"
         form = "application/x-www-form-urlencoded"
 
         self.post('/new?uri=%2F', data=json.dumps({"text": "..."}))

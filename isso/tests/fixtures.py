@@ -19,7 +19,7 @@ class FakeIP(object):
 class JSONClient(Client):
 
     def open(self, *args, **kwargs):
-        kwargs.setdefault('content_type', 'application/json')
+        kwargs.setdefault('content_type', 'application/json; charset=UTF-8')
         return super(JSONClient, self).open(*args, **kwargs)
 
 

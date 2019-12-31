@@ -132,13 +132,13 @@ def render_template(template_name, **context):
 class JSONResponse(Response):
 
     def __init__(self, obj, *args, **kwargs):
-        kwargs["content_type"] = "application/json"
+        kwargs["content_type"] = "application/json; charset=UTF-8"
         super(JSONResponse, self).__init__(
             json.dumps(obj).encode("utf-8"), *args, **kwargs)
 
 
 class XMLResponse(Response):
     def __init__(self, obj, *args, **kwargs):
-        kwargs["content_type"] = "text/xml"
+        kwargs["content_type"] = "text/xml; charset=UTF-8"
         super(XMLResponse, self).__init__(
             obj, *args, **kwargs)
